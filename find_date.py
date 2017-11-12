@@ -1,11 +1,9 @@
 import sys
 from firstdate import FirstDate, IncorrectInputString
 
-print(sys.argv[1])
 with open(sys.argv[1], "r") as ins:
-	for line in ins:
-		try:
-			print(FirstDate(line.strip()))
-		except IncorrectInputString as e:
-			print("is illegal")
-		
+    for line in ins:
+        try:
+            print(FirstDate(line.strip()))
+        except IncorrectInputString as e:
+            print("is illegal")

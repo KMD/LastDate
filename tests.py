@@ -2,6 +2,7 @@ import unittest
 
 from firstdate import FirstDate, IncorrectInputString
 
+
 class TestDateFunction(unittest.TestCase):
 
     def test_exeptions(self):
@@ -18,7 +19,6 @@ class TestDateFunction(unittest.TestCase):
         self.assertRaises(IncorrectInputString, FirstDate, "2011/20/0")
         self.assertRaises(IncorrectInputString, FirstDate, "2011/40/3")
         self.assertRaises(IncorrectInputString, FirstDate, "2100/2/29")
- 
 
     def test_zero(self):
         self.assertEqual(FirstDate('1/1/0').__str__(), '2000-01-01')
@@ -35,6 +35,7 @@ class TestDateFunction(unittest.TestCase):
         self.assertEqual(FirstDate('3/2001/1').__str__(), '2001-01-03')
         self.assertEqual(FirstDate('1/4/2002').__str__(), '2002-01-04')
         self.assertEqual(FirstDate('28/2/2100').__str__(), '2100-02-28')
+
 
 if __name__ == '__main__':
     unittest.main()
